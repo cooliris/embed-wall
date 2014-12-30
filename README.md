@@ -6,7 +6,7 @@ Cooliris Embed Wall
 
 The Embed Wall was developed to enable web publishers to present photo and video content using the Cooliris Wall user interface. The Embed Wall fetches photos and videos from a supported source, and enables users to browse, view, and play slideshows.
 
-The Embed Wall is no longer supported, and the centrally-hosted copy will become unavailable on March 1, 2015. Since many web properties still depend on it, we are making the SWF available for self-hosting to smooth the transition to another solution.
+The Embed Wall is no longer supported, and the centrally-hosted copy will become unavailable on March 1, 2015. Since many web properties still depend on it, we are making the SWF available for self-hosting to smooth the transition to a long-term solution.
 
 ### Caution
 
