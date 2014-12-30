@@ -2,13 +2,13 @@ Cooliris Embed Wall
 ==========
 **On March 1, 2015, the centrally-hosted version of the Embed Wall will stop working. Please use the following information to self-host the Embed Wall before this time.**
 
-# About
+# Overview
 
 The Embed Wall was developed to enable web publishers to present photo and video content using the Cooliris Wall user interface, using a Flash-based widget. The widget fetches a collection from a supported source, and enables users to browse, view, and play slideshows of the photos and videos.
 
 Originally, web publishers pointed at a centrally-hosted version of the Embed Wall SWF. While the product is no longer maintained, many web properties continue to depend on it, so we are making the SWF available for self-hosting to smooth the transition to a more modern web experience.
 
-### Warning
+### Caution
 
 We recommend that you transition your experience to use modern web standards as soon as possible. If you continue to use the Embed Wall, please consider the following:
 
@@ -19,7 +19,7 @@ We recommend that you transition your experience to use modern web standards as 
 
 # Self-Hosting Guide
 
-## Embed Codes
+## Embed Code
 
 If you are currently using an embed code, you need to change the SWF URL to point at a self-hosted copy:
 
@@ -47,7 +47,7 @@ If you are currently using an embed code, you need to change the SWF URL to poin
 </object> 
 ```
 
-#### Hosted Walls
+#### Centrally-Hosted Walls
 
 If you used Cooliris Express to generate an embed code, make sure that the `flashvars` in your embed code uses a `feed=…` parameter. If your embed code uses a `z=…` parameter, then you are using a centrally-hosted wall. Centrally-hosted walls will stop working on March 1, 2015. See the above warning about `api://` URLs.
 
@@ -64,5 +64,5 @@ If your page uses JavaScript to add interactivity to the wall, you can continue 
 
 ## Help
 
-We hope that the above information gets you up and running independently. If you have questions or feedback, please direct them to <team@cooliris.com>. While the Embed Wall is no longer officially supported, we will do our best to answer your questions through the transition period, which ends on March 1, 2015.
+We hope that the above information gets you up and running independently. If you have questions or feedback, please direct them to <team@cooliris.com>. While the Embed Wall is no longer officially supported, we will do our best to answer your questions through the transition period, ending March 1, 2015.
 
