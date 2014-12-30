@@ -1,19 +1,19 @@
 Cooliris Embed Wall
 ==========
-**On March 1, 2015, the centrally-hosted version of the Embed Wall will stop working. Please use the following information to self-host the Embed Wall before this time.**
+**On March 1, 2015, the centrally-hosted version of the Embed Wall will stop working. Please use the following information to self-host the SWF before this time.**
 
 # Overview
 
-The Embed Wall was developed to enable web publishers to present photo and video content using the Cooliris Wall user interface, using a Flash-based widget. The widget fetches a collection from a supported source, and enables users to browse, view, and play slideshows of the photos and videos.
+The Embed Wall was developed to enable web publishers to present photo and video content using the Cooliris Wall user interface. The Embed Wall fetches photos and videos from a supported source, and enables users to browse, view, and play slideshows.
 
-Originally, web publishers pointed at a centrally-hosted version of the Embed Wall SWF. While the product is no longer maintained, many web properties continue to depend on it, so we are making the SWF available for self-hosting to smooth the transition to a more modern web experience.
+Originally, web publishers pointed at a centrally-hosted version of the Embed Wall SWF. While the product is no longer supported, many web properties continue to depend on it, so we are making the SWF available for self-hosting.
 
 ### Caution
 
-We recommend that you transition your experience to use modern web standards as soon as possible. If you continue to use the Embed Wall, please consider the following:
+The Embed Wall is based on Adobe Flash. We recommend that you transition your experience to use modern web standards as soon as possible. If you continue to use the Embed Wall, please consider the following:
 
-* The Embed Wall is no longer supported.
-* The Embed Wall does not work on mobile browsers, as it was built on Adobe Flash.
+* The Embed Wall is no longer supported, and we cannot guarantee that it will continue to work properly.
+* The Embed Wall is built on Adobe Flash, and therefore does not work on mobile browsers or desktop browsers without the plugin.
 * `api://` URLs may stop working at some point, since they depend on hardcoded API keys.
 * `http(s)://` URLs referencing self-hosted Media RSS feeds are more reliable.
 
@@ -21,7 +21,7 @@ We recommend that you transition your experience to use modern web standards as 
 
 ## Embed Code
 
-If you are currently using an embed code, you need to change the SWF URL to point at a self-hosted copy:
+If you are using an embed code, change the SWF URL to point at a self-hosted copy:
 
 1. Host [cooliris.swf](cooliris.swf) at a URL on your web server.
 2. Replace the `http://apps.cooliris.com/embed/cooliris.swf` link in the embed code with your URL.
@@ -49,18 +49,19 @@ If you are currently using an embed code, you need to change the SWF URL to poin
 
 #### Centrally-Hosted Walls
 
-If you used Cooliris Express to generate an embed code, make sure that the `flashvars` in your embed code uses a `feed=…` parameter. If your embed code uses a `z=…` parameter, then you are using a centrally-hosted wall. Centrally-hosted walls will stop working on March 1, 2015. See the above warning about `api://` URLs.
+If you used the Cooliris Express tool to generate an embed code, make sure that the `flashvars` in your embed code uses a `feed=…` parameter. If your embed code uses a `z=…` parameter, then you are using a centrally-hosted wall. Centrally-hosted walls will stop working on March 1, 2015.
 
 ## JavaScript
 
-If your page uses JavaScript to add interactivity to the wall, you can continue to do so by self-hosting the JavaScript bridge in addition to the SWF.
+If your page uses JavaScript to integrate more deeply with the Embed Wall, you can continue to do so by self-hosting the JavaScript bridge alongside the SWF.
 
 1. Host [cooliris.swf](cooliris.swf) and [cooliris-embed.js](js/cooliris-embed.js) at URLs on your web server.
-2. See [the JavaScript HTML example](js/example.html) for an example of how to initialize the JavaScript bridge with a self-hosted copy of the Embed Wall SWF and JavaScript files. The ordering is important:
+2. See [the JavaScript HTML example](js/example.html) for an example of how to initialize the JavaScript bridge with self-hosted SWF and JS files. The ordering is important:
   1. Include `cooliris-embed.js` to set up the `cooliris` global object.
   2. Set the `onEmbedInitialized()` callback to register for user interaction events.
-  3. Insert the Embed Wall into the page. In the example, the `embedWall()` function uses the SWFObject library.
-  4. Use the `cooliris.embed` API as before.
+  3. Insert the Embed Wall into the page.
+
+The `cooliris.embed` API should continue to work as before.
 
 ## Help
 
