@@ -49,7 +49,7 @@ If you are using an embed code, change the SWF URL to point at a self-hosted cop
 
 #### Centrally-Hosted Walls
 
-If you used the Cooliris Express tool to generate an embed code, make sure that the `flashvars` in your embed code uses a `feed=…` parameter. If your embed code uses a `z=…` parameter, then you are using a centrally-hosted wall. Centrally-hosted walls will stop working on March 1, 2015.
+If you used the Cooliris Express tool to generate an embed code, make sure that the `flashvars` in your embed code uses a `feed=…` parameter. If your embed code uses a `z=…` parameter, then you are using a centrally-hosted wall. In this case, we recommend that you switch to a feed URL, e.g. `flashvars="feed=http://your/media.rss"`. Centrally-hosted walls will stop working on March 1, 2015.
 
 ## JavaScript
 
@@ -65,5 +65,5 @@ The `cooliris.embed` API should continue to work as before.
 
 ## Help
 
-We hope that the above information gets you up and running independently. If you have questions or feedback, please direct them to <team@cooliris.com>. While the Embed Wall is no longer officially supported, we will do our best to answer your questions through the transition period, ending March 1, 2015.
+We hope that the above information enables you to successfully self-host the Embed Wall as a bridge to a more long-term solution. If you have questions or feedback, please direct them to <team@cooliris.com>. While the Embed Wall is no longer officially supported, we will do our best to answer your questions through the transition period, ending March 1, 2015.
 
