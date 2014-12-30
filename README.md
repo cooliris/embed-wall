@@ -9,7 +9,7 @@ Originally, web publishers pointed at a centrally-hosted version of the Embed Wa
 
 ### Warning
 
-<div color="red">We recommend that you migrate your content to a more modern solution that uses standard Web technologies and supports mobile browsers. If you continue to use the Embed Wall, please consider the following:</div>
+We recommend that you migrate your content to a more modern solution that uses standard Web technologies and supports mobile browsers. If you continue to use the Embed Wall, please consider the following:
 
 * The Embed Wall is no longer supported.
 * The Embed Wall does not work on mobile browsers, as it was built on Adobe Flash.
@@ -20,9 +20,15 @@ Originally, web publishers pointed at a centrally-hosted version of the Embed Wa
 
 ## Embed Codes
 
+If you are currently using an embed code, you need to change the SWF URL to point at a self-hosted copy:
+
 1. Host [cooliris.swf](cooliris.swf) at a URL on your web server.
 2. Replace the `http://apps.cooliris.com/embed/cooliris.swf` link in the embed code with your URL.
 
+If you used Cooliris Express to generate an embed code, make sure that it is using an `api://` or `http(s)://` feed URL. Centrally-hosted wall identifiers will no longer work when the Cooliris server shuts down. If your embed code has a `z` parameter, e.g. `<param name="flashvars" value="z=…">` then you need to change it. If it has a `feed` parameter, then it should continue to work, e.g. `<param name="flashvars" value="feed=…">`. However, see the warning above about `api://` URLs.
+
 ## JavaScript
 
+1. Host [cooliris.swf](cooliris.swf) and [cooliris-embed.js](js/cooliris-embed.js) at a URL on your web server.
+2. See [the JavaScript HTML example](js/example.html) 
 
