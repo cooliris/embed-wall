@@ -10,7 +10,7 @@ The Embed Wall is no longer supported, and the centrally-hosted copy will become
 
 ### Caution
 
-The Embed Wall is based on Adobe Flash. We recommend that you transition your experience to use modern web standards as soon as possible. If you continue to use the Embed Wall, please consider the following:
+The Embed Wall is based on Adobe Flash. We recommend that you transition your experience to use another solution based on modern web standards. If you continue to use the Embed Wall, please consider the following:
 
 * The Embed Wall is no longer supported, and we cannot guarantee that it will continue to work properly.
 * The Embed Wall is built on Adobe Flash, and therefore does not work on mobile browsers or desktop browsers without the plugin.
