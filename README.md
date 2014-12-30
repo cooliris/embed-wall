@@ -14,8 +14,8 @@ The Embed Wall is based on Adobe Flash. We recommend that you transition your ex
 
 * The Embed Wall is no longer supported, and we cannot guarantee that it will continue to work properly.
 * The Embed Wall does not work on mobile browsers, or on desktop browsers without the Flash plugin.
-* `api://` URLs (Facebook, Flickr, Picasa, YouTube) may stop working at some point, since they depend on hardcoded API keys.
-* `http(s)://` URLs referencing Media RSS feeds are preferable since they do not depend on API keys.
+* `api://` URLs for Facebook, Flickr, Picasa, and YouTube depend on hardcoded API keys, and therefore may stop working at some point.
+* `http(s)://` URLs referencing Media RSS feeds are a more reliable option.
 
 # Self-Hosting Guide
 
