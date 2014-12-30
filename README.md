@@ -16,7 +16,7 @@ We recommend that you migrate your content to a more modern solution that uses s
 * `api://` URLs may stop working at some point, since they depend on hardcoded API keys.
 * `http(s)://` URLs referencing self-hosted Media RSS feeds will likely continue to work for longer.
 
-# Self-Hosting
+# Self-Hosting Guide
 
 ## Embed Codes
 
@@ -24,11 +24,44 @@ If you are currently using an embed code, you need to change the SWF URL to poin
 
 1. Host [cooliris.swf](cooliris.swf) at a URL on your web server.
 2. Replace the `http://apps.cooliris.com/embed/cooliris.swf` link in the embed code with your URL.
+3. In your embed code, change `allowScriptAccess` to `never`:
+```html
+<object id="…" classid="…" width="…" height="…">
+  <param name="movie" value="http://{YOUR URL}/cooliris.swf"/>
+  <param name="allowFullScreen" value="true"/>
+  <param name="allowScriptAccess" value="never"/>
+  <param name="bgColor" value="…"/>
+  <param name="flashvars" value="feed=…"/>
+  <param name="wmode" value="opaque"/>
+  <embed type="application/x-shockwave-flash"
+    src="http://{YOUR URL}/cooliris.swf"
+    width="…"
+    height="…"
+    allowfullscreen="true"
+    allowscriptaccess="never"
+    bgcolor="…"
+    flashvars="feed=…"
+    wmode="opaque">
+  </embed> 
+</object> 
+```
 
-If you used Cooliris Express to generate an embed code, make sure that it is using an `api://` or `http(s)://` feed URL. Centrally-hosted wall identifiers will no longer work when the Cooliris server shuts down. If your embed code has a `z` parameter, e.g. `<param name="flashvars" value="z=…">` then you need to change it. If it has a `feed` parameter, then it should continue to work, e.g. `<param name="flashvars" value="feed=…">`. However, see the warning above about `api://` URLs.
+#### Hosted Walls
+
+If you used Cooliris Express to generate an embed code, make sure that the `flashvars` in your embed code uses a `feed=…` parameter. If your embed code uses a `z=…` parameter, then you are using a centrally-hosted wall. Centrally-hosted walls will stop working on March 1, 2015. See the above warning about `api://` URLs.
 
 ## JavaScript
 
-1. Host [cooliris.swf](cooliris.swf) and [cooliris-embed.js](js/cooliris-embed.js) at a URL on your web server.
-2. See [the JavaScript HTML example](js/example.html) 
+If your page uses JavaScript to add interactivity to the wall, you can continue to do so by self-hosting the JavaScript bridge in addition to the SWF.
+
+1. Host [cooliris.swf](cooliris.swf) and [cooliris-embed.js](js/cooliris-embed.js) at URLs on your web server.
+2. See [the JavaScript HTML example](js/example.html) for an example of how to initialize the JavaScript bridge with a self-hosted copy of the Embed Wall SWF and JavaScript files. The ordering is important:
+  1. Include `cooliris-embed.js` to set up the `cooliris` global object.
+  2. Set the `onEmbedInitialized()` callback to register for user interaction events.
+  3. Insert the Embed Wall into the page. In the example, the `embedWall()` function uses the SWFObject library.
+  4. The `cooliris.embed` API should continue to work as before.
+
+
+
+
 
