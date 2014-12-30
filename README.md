@@ -1,6 +1,6 @@
 Cooliris Embed Wall
 ==========
-**On March 1, 2015 the centrally-hosted version of the Embed Wall will stop working. Please use the following information to self-host the Embed Wall before this time.**
+**On March 1, 2015, the centrally-hosted version of the Embed Wall will stop working. Please use the following information to self-host the Embed Wall before this time.**
 
 # About
 
