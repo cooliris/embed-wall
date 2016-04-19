@@ -1,7 +1,7 @@
 Cooliris Embed Wall
 ==========
 
-Hello
+Hello!
 
 The Embed Wall is no longer supported, and the centrally-hosted copy is no longer available. Since some web properties still use it, we are making the SWF available for self-hosting to smooth the transition to alternative solutions.
 ![Embed Wall](images/screenshot.jpg)
